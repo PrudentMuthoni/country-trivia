@@ -652,10 +652,10 @@ flutter run -d <emulator_id> --release
 - [x] Add `maxAttempts = 3`
 
 #### T4 — Create app theme
-- [x] Create `lib/utils/app_theme.dart`
-- [x] Add Material 3 light theme with indigo seed
-- [x] Configure `AppBarTheme` (centered, no elevation)
-- [x] Configure `ElevatedButtonThemeData` (full-width, 56px, rounded 12px)
+- [ ] Create `lib/utils/app_theme.dart`
+- [ ] Add Material 3 light theme with indigo seed
+- [ ] Configure `AppBarTheme` (centered, no elevation)
+- [ ] Configure `ElevatedButtonThemeData` (full-width, 56px, rounded 12px)
 
 #### T5 — Create StorageService
 - [ ] Create `lib/services/storage_service.dart`
