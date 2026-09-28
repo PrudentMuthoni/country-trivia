@@ -637,11 +637,11 @@ flutter run -d <emulator_id> --release
 - [ ] Run `flutter pub get`
 
 #### T2 — Create Country model
-- [ ] Create `lib/models/country.dart`
-- [ ] Add `name` and `isoCode` fields
-- [ ] Add `fromJson` factory constructor
-- [ ] Add `==` operator and `hashCode`
-- [ ] Add `toString` for debugging
+- [x] Create `lib/models/country.dart`
+- [x] Add `name` and `isoCode` fields
+- [x] Add `fromJson` factory constructor
+- [x] Add `==` operator and `hashCode`
+- [x] Add `toString` for debugging
 
 #### T3 — Create constants
 - [ ] Create `lib/utils/constants.dart`
