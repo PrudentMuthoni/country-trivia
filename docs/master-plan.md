@@ -706,12 +706,12 @@ flutter run -d <emulator_id> --release
 - [x] **Run on emulator** — verify score updates after correct answer, progress bar animates, layout doesn't overflow
 
 #### T11 — Create ResultOverlay widget
-- [x] Create `lib/views/widgets/result_overlay.dart`
-- [x] Add correct/incorrect icon and title
-- [x] Display country name
-- [x] Show points earned or "No points awarded"
-- [x] Add "Next Flag" button
-- [x] **Run on emulator** — verify overlay appears after round ends, correct/incorrect styling, "Next" button advances
+- [ ] Create `lib/views/widgets/result_overlay.dart`
+- [ ] Add correct/incorrect icon and title
+- [ ] Display country name
+- [ ] Show points earned or "No points awarded"
+- [ ] Add "Next Flag" button
+- [ ] **Run on emulator** — verify overlay appears after round ends, correct/incorrect styling, "Next" button advances
 
 #### T12 — Create TriviaView
 - [ ] Create `lib/views/trivia_view.dart`
