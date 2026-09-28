@@ -630,11 +630,11 @@ flutter run -d <emulator_id> --release
 ### 10.5 Ticket Details
 
 #### T1 — Update pubspec.yaml
-- [ ] Add `provider: ^6.1.2`
-- [ ] Add `shared_preferences: ^2.3.3`
-- [ ] Add `http: ^1.2.2`
-- [ ] Add `cached_network_image: ^3.4.1`
-- [ ] Run `flutter pub get`
+- [x] Add `provider: ^6.1.2`
+- [x] Add `shared_preferences: ^2.3.3`
+- [x] Add `http: ^1.2.2`
+- [x] Add `cached_network_image: ^3.4.1`
+- [x] Run `flutter pub get`
 
 #### T2 — Create Country model
 - [ ] Create `lib/models/country.dart`
