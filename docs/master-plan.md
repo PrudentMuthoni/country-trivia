@@ -666,11 +666,11 @@ flutter run -d <emulator_id> --release
 - [ ] Add `clearAll()`
 
 #### T6 — Create CountryService
-- [ ] Create `lib/services/country_service.dart`
-- [ ] Add `fetchCountries()` → `Future<List<Country>>`
-- [ ] HTTP GET to GitHub ISO 3166 JSON
-- [ ] Parse JSON array to `List<Country>`
-- [ ] Throw exception on non-200 status
+- [x] Create `lib/services/country_service.dart`
+- [x] Add `fetchCountries()` → `Future<List<Country>>`
+- [x] HTTP GET to GitHub ISO 3166 JSON
+- [x] Parse JSON array to `List<Country>`
+- [x] Throw exception on non-200 status
 
 #### T7 — Create TriviaViewModel
 - [ ] Create `lib/viewmodels/trivia_viewmodel.dart`
