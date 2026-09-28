@@ -699,11 +699,11 @@ flutter run -d <emulator_id> --release
 - [x] **Run on emulator** — verify all 4 states render correctly, tap targets are >= 48dp, text is readable
 
 #### T10 — Create ScoreHeader widget
-- [x] Create `lib/views/widgets/score_header.dart`
-- [x] Add score chip with star icon
-- [x] Add solved count chip with flag icon
-- [x] Add linear progress bar (solved / total)
-- [x] **Run on emulator** — verify score updates after correct answer, progress bar animates, layout doesn't overflow
+- [ ] Create `lib/views/widgets/score_header.dart`
+- [ ] Add score chip with star icon
+- [ ] Add solved count chip with flag icon
+- [ ] Add linear progress bar (solved / total)
+- [ ] **Run on emulator** — verify score updates after correct answer, progress bar animates, layout doesn't overflow
 
 #### T11 — Create ResultOverlay widget
 - [ ] Create `lib/views/widgets/result_overlay.dart`
