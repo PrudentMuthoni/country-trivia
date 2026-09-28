@@ -691,12 +691,12 @@ flutter run -d <emulator_id> --release
 - [x] **Run on emulator** — verify flag image loads, placeholder shows during loading, error icon shows on bad URL
 
 #### T9 — Create AnswerButton widget
-- [ ] Create `lib/views/widgets/answer_button.dart`
-- [ ] Add `AnswerState` enum (idle, correct, wrong, disabled)
-- [ ] Style button based on state (colors, icons)
-- [ ] Disable button when not idle
-- [ ] Add check/cancel icon for correct/wrong states
-- [ ] **Run on emulator** — verify all 4 states render correctly, tap targets are >= 48dp, text is readable
+- [x] Create `lib/views/widgets/answer_button.dart`
+- [x] Add `AnswerState` enum (idle, correct, wrong, disabled)
+- [x] Style button based on state (colors, icons)
+- [x] Disable button when not idle
+- [x] Add check/cancel icon for correct/wrong states
+- [x] **Run on emulator** — verify all 4 states render correctly, tap targets are >= 48dp, text is readable
 
 #### T10 — Create ScoreHeader widget
 - [ ] Create `lib/views/widgets/score_header.dart`
