@@ -658,12 +658,12 @@ flutter run -d <emulator_id> --release
 - [ ] Configure `ElevatedButtonThemeData` (full-width, 56px, rounded 12px)
 
 #### T5 — Create StorageService
-- [ ] Create `lib/services/storage_service.dart`
-- [ ] Add `loadSolved()` → `Set<String>`
-- [ ] Add `saveSolved(Set<String>)`
-- [ ] Add `loadScore()` → `int`
-- [ ] Add `saveScore(int)`
-- [ ] Add `clearAll()`
+- [x] Create `lib/services/storage_service.dart`
+- [x] Add `loadSolved()` → `Set<String>`
+- [x] Add `saveSolved(Set<String>)`
+- [x] Add `loadScore()` → `int`
+- [x] Add `saveScore(int)`
+- [x] Add `clearAll()`
 
 #### T6 — Create CountryService
 - [ ] Create `lib/services/country_service.dart`
