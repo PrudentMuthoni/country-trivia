@@ -644,12 +644,12 @@ flutter run -d <emulator_id> --release
 - [x] Add `toString` for debugging
 
 #### T3 — Create constants
-- [ ] Create `lib/utils/constants.dart`
-- [ ] Add `countriesUrl` (GitHub ISO 3166 JSON)
-- [ ] Add `flagUrl(isoCode)` helper
-- [ ] Add `solvedKey` and `scoreKey` pref keys
-- [ ] Add `pointsPerTry` list `[10, 8, 5]`
-- [ ] Add `maxAttempts = 3`
+- [x] Create `lib/utils/constants.dart`
+- [x] Add `countriesUrl` (GitHub ISO 3166 JSON)
+- [x] Add `flagUrl(isoCode)` helper
+- [x] Add `solvedKey` and `scoreKey` pref keys
+- [x] Add `pointsPerTry` list `[10, 8, 5]`
+- [x] Add `maxAttempts = 3`
 
 #### T4 — Create app theme
 - [ ] Create `lib/utils/app_theme.dart`
