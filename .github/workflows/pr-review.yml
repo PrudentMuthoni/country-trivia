@@ -1,0 +1,111 @@
+name: PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  pull_request_review_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install OpenCode CLI
+        run: |
+          curl -fsSL https://opencode.ai/v2/install | bash
+          opencode --version
+
+      - name: Configure OpenCode with Big Pickle model
+        run: |
+          mkdir -p ~/.config/opencode
+          cat > ~/.config/opencode/opencode.json << 'EOF'
+          {
+            "$schema": "https://opencode.ai/config.json",
+            "model": "opencode/big-pickle",
+            "provider": {
+              "opencode": {
+                "apiKey": "${{ secrets.OPENCODE_API_KEY }}",
+                "baseUrl": "https://opencode.ai/zen/v1"
+              }
+            }
+          }
+          EOF
+
+      - name: Get PR diff
+        id: diff
+        run: |
+          git diff origin/${{ github.event.pull_request.base.sha }}...HEAD > /tmp/pr-diff.txt
+          echo "diff_size=$(wc -c < /tmp/pr-diff.txt)" >> $GITHUB_OUTPUT
+
+      - name: Run OpenCode PR review
+        if: steps.diff.outputs.diff_size > 0
+        run: |
+          cat /tmp/pr-diff.txt | opencode run --pure --model "opencode/big-pickle" "You are a senior Flutter developer reviewing a pull request for a country trivia app.
+
+          Review the diff above and provide a thorough code review covering:
+
+          1. **Code Quality** - Is the code clean, readable, and well-structured?
+          2. **Architecture** - Does it follow MVVM pattern correctly?
+          3. **State Management** - Is Provider used correctly?
+          4. **Error Handling** - Are edge cases handled properly?
+          5. **Performance** - Any performance concerns?
+          6. **Security** - Any security issues?
+          7. **Testing** - Are there sufficient tests?
+          8. **Dart/Flutter Best Conventions** - Does it follow Flutter/Dart conventions?
+
+          Also check:
+          - No emojis in code, comments, or commit messages
+          - No hardcoded values that should be constants
+          - Proper null safety usage
+          - No memory leaks or resource leaks
+
+          Format your review as:
+          ## PR Review Summary
+
+          ### Strengths
+          - List what was done well
+
+          ### Issues
+          #### Critical (must fix)
+          - List critical issues
+
+          #### Suggestions (nice to have)
+          - List suggestions
+
+          ### Questions
+          - List any questions for the author
+
+          ### Verdict
+          - APPROVE / REQUEST CHANGES / COMMENT with brief reasoning" > /tmp/pr-review.txt 2>&1
+
+      - name: Post review as PR comment
+        if: steps.diff.outputs.diff_size > 0
+        run: |
+          REVIEW_BODY=$(cat /tmp/pr-review.txt)
+          gh pr comment ${{ github.event.pull_request.number }} --body "$REVIEW_BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post review summary
+        if: steps.diff.outputs.diff_size > 0
+        run: |
+          echo "## PR Review Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Review posted as comment on PR #${{ github.event.pull_request.number }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "<details><summary>Click to view full review</summary>" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          cat /tmp/pr-review.txt >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "</details>" >> $GITHUB_STEP_SUMMARY
