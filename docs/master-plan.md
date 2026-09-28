@@ -652,25 +652,25 @@ flutter run -d <emulator_id> --release
 - [x] Add `maxAttempts = 3`
 
 #### T4 — Create app theme
-- [x] Create `lib/utils/app_theme.dart`
-- [x] Add Material 3 light theme with indigo seed
-- [x] Configure `AppBarTheme` (centered, no elevation)
-- [x] Configure `ElevatedButtonThemeData` (full-width, 56px, rounded 12px)
+- [ ] Create `lib/utils/app_theme.dart`
+- [ ] Add Material 3 light theme with indigo seed
+- [ ] Configure `AppBarTheme` (centered, no elevation)
+- [ ] Configure `ElevatedButtonThemeData` (full-width, 56px, rounded 12px)
 
 #### T5 — Create StorageService
-- [x] Create `lib/services/storage_service.dart`
-- [x] Add `loadSolved()` → `Set<String>`
-- [x] Add `saveSolved(Set<String>)`
-- [x] Add `loadScore()` → `int`
-- [x] Add `saveScore(int)`
-- [x] Add `clearAll()`
+- [ ] Create `lib/services/storage_service.dart`
+- [ ] Add `loadSolved()` → `Set<String>`
+- [ ] Add `saveSolved(Set<String>)`
+- [ ] Add `loadScore()` → `int`
+- [ ] Add `saveScore(int)`
+- [ ] Add `clearAll()`
 
 #### T6 — Create CountryService
-- [x] Create `lib/services/country_service.dart`
-- [x] Add `fetchCountries()` → `Future<List<Country>>`
-- [x] HTTP GET to GitHub ISO 3166 JSON
-- [x] Parse JSON array to `List<Country>`
-- [x] Throw exception on non-200 status
+- [ ] Create `lib/services/country_service.dart`
+- [ ] Add `fetchCountries()` → `Future<List<Country>>`
+- [ ] HTTP GET to GitHub ISO 3166 JSON
+- [ ] Parse JSON array to `List<Country>`
+- [ ] Throw exception on non-200 status
 
 #### T7 — Create TriviaViewModel
 - [ ] Create `lib/viewmodels/trivia_viewmodel.dart`
@@ -683,35 +683,35 @@ flutter run -d <emulator_id> --release
 - [ ] Add `resetGame()` — clear all state and storage
 
 #### T8 — Create FlagDisplay widget
-- [x] Create `lib/views/widgets/flag_display.dart`
-- [x] Use `CachedNetworkImage` with flag URL
-- [x] Add loading placeholder (grey container + spinner)
-- [x] Add error widget (grey container + flag icon)
-- [x] Wrap in `ClipRRect` with rounded corners and shadow
-- [x] **Run on emulator** — verify flag image loads, placeholder shows during loading, error icon shows on bad URL
+- [ ] Create `lib/views/widgets/flag_display.dart`
+- [ ] Use `CachedNetworkImage` with flag URL
+- [ ] Add loading placeholder (grey container + spinner)
+- [ ] Add error widget (grey container + flag icon)
+- [ ] Wrap in `ClipRRect` with rounded corners and shadow
+- [ ] **Run on emulator** — verify flag image loads, placeholder shows during loading, error icon shows on bad URL
 
 #### T9 — Create AnswerButton widget
-- [x] Create `lib/views/widgets/answer_button.dart`
-- [x] Add `AnswerState` enum (idle, correct, wrong, disabled)
-- [x] Style button based on state (colors, icons)
-- [x] Disable button when not idle
-- [x] Add check/cancel icon for correct/wrong states
-- [x] **Run on emulator** — verify all 4 states render correctly, tap targets are >= 48dp, text is readable
+- [ ] Create `lib/views/widgets/answer_button.dart`
+- [ ] Add `AnswerState` enum (idle, correct, wrong, disabled)
+- [ ] Style button based on state (colors, icons)
+- [ ] Disable button when not idle
+- [ ] Add check/cancel icon for correct/wrong states
+- [ ] **Run on emulator** — verify all 4 states render correctly, tap targets are >= 48dp, text is readable
 
 #### T10 — Create ScoreHeader widget
-- [x] Create `lib/views/widgets/score_header.dart`
-- [x] Add score chip with star icon
-- [x] Add solved count chip with flag icon
-- [x] Add linear progress bar (solved / total)
-- [x] **Run on emulator** — verify score updates after correct answer, progress bar animates, layout doesn't overflow
+- [ ] Create `lib/views/widgets/score_header.dart`
+- [ ] Add score chip with star icon
+- [ ] Add solved count chip with flag icon
+- [ ] Add linear progress bar (solved / total)
+- [ ] **Run on emulator** — verify score updates after correct answer, progress bar animates, layout doesn't overflow
 
 #### T11 — Create ResultOverlay widget
-- [x] Create `lib/views/widgets/result_overlay.dart`
-- [x] Add correct/incorrect icon and title
-- [x] Display country name
-- [x] Show points earned or "No points awarded"
-- [x] Add "Next Flag" button
-- [x] **Run on emulator** — verify overlay appears after round ends, correct/incorrect styling, "Next" button advances
+- [ ] Create `lib/views/widgets/result_overlay.dart`
+- [ ] Add correct/incorrect icon and title
+- [ ] Display country name
+- [ ] Show points earned or "No points awarded"
+- [ ] Add "Next Flag" button
+- [ ] **Run on emulator** — verify overlay appears after round ends, correct/incorrect styling, "Next" button advances
 
 #### T12 — Create TriviaView
 - [ ] Create `lib/views/trivia_view.dart`
