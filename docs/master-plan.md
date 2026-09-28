@@ -683,12 +683,12 @@ flutter run -d <emulator_id> --release
 - [ ] Add `resetGame()` — clear all state and storage
 
 #### T8 — Create FlagDisplay widget
-- [ ] Create `lib/views/widgets/flag_display.dart`
-- [ ] Use `CachedNetworkImage` with flag URL
-- [ ] Add loading placeholder (grey container + spinner)
-- [ ] Add error widget (grey container + flag icon)
-- [ ] Wrap in `ClipRRect` with rounded corners and shadow
-- [ ] **Run on emulator** — verify flag image loads, placeholder shows during loading, error icon shows on bad URL
+- [x] Create `lib/views/widgets/flag_display.dart`
+- [x] Use `CachedNetworkImage` with flag URL
+- [x] Add loading placeholder (grey container + spinner)
+- [x] Add error widget (grey container + flag icon)
+- [x] Wrap in `ClipRRect` with rounded corners and shadow
+- [x] **Run on emulator** — verify flag image loads, placeholder shows during loading, error icon shows on bad URL
 
 #### T9 — Create AnswerButton widget
 - [ ] Create `lib/views/widgets/answer_button.dart`
